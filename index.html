@@ -109,18 +109,7 @@
 //全局变量
 var note=0,player,timer,playing=1,mute=true,mList,shrink;
 
-function pageLoad(){
-$("#frame").src="pages/aboutMe.html";
-}
-$("th",2).on("click", function (){
-tip("&emsp;&emsp;这些脚本是我在学会插入元素后做的，有的完工了，有的还没有完工，还有的有bug，甚至有的已经失效(比如学习通的这学期用完就废了，要等我下学期再改)，但是现在我懒得修，这些脚本需要配合那些能注入脚本的浏览器食用！");
-});
-function tip(msg){
-var elem=document.createElement("div");
-elem.id="tip";
-elem.innerHTML="<div id=\"tipMsg\">"+msg+"<div id=\"tipClose\" onclick=\"document.body.removeChild(this.parentNode.parentNode);\">确认</div></div>";
-document.body.appendChild(elem);
-}
+
 </script>
 <script src="js/menu.js"></script>
 <script src="js/musicList.js"></script>
