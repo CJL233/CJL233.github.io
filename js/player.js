@@ -70,7 +70,7 @@ vol(parseInt($("#volume input").value));
 function playerLoad(){
 player=document.createElement("audio");
 player.volume="0.5";
-//player.controls="controls";
+player.controls="controls";
 player.autoplay="autoplay";
 if(!localStorage.musicList)localStorage.musicList=musicList;
 mList= eval ("(" +localStorage.musicList+ ")");
@@ -88,18 +88,18 @@ localStorage.musicList=JSON.stringify(mList);
 mReload();
 }
 });
-player.on("readystatechange",function (){
-$(".switch",2).click();
-});
-$(".musicIcons",2).style.backgroundImage="url('img/icons/ic_pause_white.png')";
+setTimeout(function (){
+$(".switch",2).parentNode.style.backgroundImage="url('img/icons/ic_pause_white.png')";
 $("#musicIcon1").style.animation="musicRotate 4s linear infinite";
 $("#musicIcon2").style.animation="musicShake 4s linear infinite";
+player.play();
 progress();
+},5000);
 }
 function play(src){
 player.pause();
 player.src=src;
-setTimeout("$('.switch',2).click()",500);
+/*setTimeout("$('.switch',2).click()",500);*/
 }
 //进度条
 function progress(){
