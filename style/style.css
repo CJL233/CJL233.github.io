@@ -477,8 +477,8 @@ margin-top:5vh;
 box-shadow:2px 2px 10px rgba(0,0,0,0.5);
 }
 @font-face {font-family: 'noto';
-src: url('style/font/NotoSansBatak-Regular.ttf');  
+src: url('font/NotoSansBatak-Regular.ttf');  
 }
 @font-face {font-family: 'roboto';
-src: url('style/font/Roboto-Regular.ttf');  
+src: url('font/Roboto-Regular.ttf');  
 }
