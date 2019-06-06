@@ -70,9 +70,9 @@ vol(parseInt($("#volume input").value));
 function playerLoad(){
 player=document.createElement("audio");
 player.volume="0.5";
-player.controls="controls";
+/*player.controls="controls";*/
 player.autoplay="autoplay";
-if(!localStorage.musicList)localStorage.musicList=musicList;
+if(!localStorage.musicList)localStorage.musicList=preM;
 mList= eval ("(" +localStorage.musicList+ ")");
 for(var i=0;i<mList.musics.length;i++){
 $("#mList a + div").innerHTML+="<div class=\"musics\" data-id=\""+(i+1)+"\" data-src=\""+mList.musics[i].src+"\"><img src=\"img/icons/ic_add_black.png\" class=\"mDelete\">"+mList.musics[i].name+"</div>";
@@ -99,7 +99,10 @@ progress();
 function play(src){
 player.pause();
 player.src=src;
-/*setTimeout("$('.switch',2).click()",500);*/
+$(".switch",2).parentNode.style.backgroundImage="url('img/icons/ic_pause_white.png')";
+$("#musicIcon1").style.animation="musicRotate 4s linear infinite";
+$("#musicIcon2").style.animation="musicShake 4s linear infinite";
+setTimeout("progress()",1000);
 }
 //进度条
 function progress(){
