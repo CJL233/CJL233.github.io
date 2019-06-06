@@ -36,7 +36,7 @@ $(".menuIcon3").style.transform="rotate(0deg)";
 });
 function $transform(){
 if(!shrink){
-$("marquee").style.display="none";
+$("#marquee").style.display="none";
 $("#header").style.height="8vh";
 $("#body").style.height="92vh";
 $("#navigation").style.top="-8vh";
