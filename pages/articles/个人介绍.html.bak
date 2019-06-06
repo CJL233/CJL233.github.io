@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<html>
+<head><title>个人介绍</title></head>
+<style>
+body{
+background:#EEEEEE;
+font-family:roboto;
+}
+table{
+background:#fff;
+width:70vw;
+margin:0 auto;
+margin-top:5vh;
+padding:6vh;
+box-shadow:2px 2px 10px rgba(0,0,0,0.5);
+border-radius:6px;
+font-size:1.6vw;
+line-height:7vh;
+}
+td{
+width:70%;
+text-align:right;
+}
+td:first-child{
+text-align:left;
+width:30%;
+}
+#head{
+float:left;
+margin-left:6vw;
+width:14vw;
+height:21vw;
+background:#fff;
+box-shadow:2px 2px 10px rgba(0,0,0,0.5);
+border:5px;
+text-align:center;
+}
+#text{
+cursor:pointer;
+color:white;
+margin:1vw;
+width:12vw;
+height:12vw;
+padding-top:2vw;
+padding-bottom:2vw;
+font-size:2vw;
+line-height:3vw;
+background:url("../../img/pictures/Portrait.jpg") no-repeat center center/100% auto;
+}
+</style>
+<body>
+<div id="head"><div id="text">点击<br>查看<br>隐藏<br>图片</div>个人照片</div>
+<table border="0" align="middle">
+<tr>
+<td><strong style="font-size:2vw;">个人介绍</strong></td>
+</tr>
+<tr>
+<td>姓名</td>
+<td>曹佳乐</td>
+</tr>
+<tr>
+<td>年龄</td>
+<td>18</td>
+</tr>
+<tr>
+<td>籍贯</td>
+<td>江西省南昌市</td>
+</tr>
+<tr>
+<td>班级</td>
+<td>理学院应用物理1801班</td>
+</tr>
+<tr>
+<td>爱好</td>
+<td><strong>学习</strong>、听歌、读书、<span style="text-decoration:line-through;">玩游戏、看小说</span></td>
+</tr>
+<tr>
+<td>喜欢的运动</td>
+<td>然而并不喜欢剧烈运动<span style="text-decoration:line-through;">(其实就是懒)</span></td>
+</tr>
+<tr>
+<td>性格</td>
+<td style="text-align:left">平日里乐观开朗，待人温和，被弄烦了秒变暴躁老哥</td>
+</tr>
+</table>
+</body>
+<script>
+document.querySelector("#text").addEventListener("click",function (){
+this.style.background="#E0E0E0";
+this.style.color="#f44336";
+this.innerHTML="什么？<br>照片！<br>当然是<br>不存在啊";
+});
+</script>
+</html>

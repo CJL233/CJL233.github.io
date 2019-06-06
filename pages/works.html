@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<html>
+<head><title>作品</title></head>
+<style>
+body{
+margin:0;
+padding:0;
+}
+#left{
+float:left;
+width:20vw;
+height:100vh;
+background:#CFD8DC;
+box-shadow:2px 0 10px rgba(55,71,79,0.5);
+position:relative;
+z-index:2;
+margin:0;
+}
+#right{
+right:0;
+top:0;
+width:80vw;
+height:100vh;
+background:#EEEEEE;
+position:absolute;
+z-index:1;
+margin:0;
+}
+ul{
+width:100%;
+margin:0;
+padding:0;
+}
+ul li{
+background:#FFFFFF;
+color:#37474F;
+width:100%;
+height:4.375vw;
+margin:0;
+line-height:4.375vw;
+font-size:1.1vw;
+text-align:center;
+margin-bottom:0.21vw;
+cursor:pointer;
+}
+ul li:hover{
+background:#455A64 url("../img/icons/ic_right_white.png") no-repeat 93% center/auto 4vh;
+color:#FFFFFF;
+}
+#text{
+width:calc(50vw - 60px);
+margin:30px;
+padding:30px;
+background:#FFF;
+box-shadow:2px 2px 10px rgba(0,0,0,0.5);
+font-size:1.1vw;
+border-radius:10px;
+height:calc(100vh - 120px);
+overflow:auto;
+}
+#i1{
+width:1080px;
+height:1920px;
+top:calc(50vh - 960px);
+position:fixed;
+right:-350px;
+background:#FFF;
+border:0;
+box-shadow:2px 2px 15px rgba(0,0,0,0.5);
+transform:scale(0.3);
+}
+a{
+color:#2196f3;
+}
+#i2{
+width:40vw;
+height:40vh;
+margin:0 auto;
+border:0;
+box-shadow:0 0 5px rgba(0,0,0,0.5);
+}
+.links,.target{display:none}
+</style>
+<body>
+<section id="left"><ul>
+<li>进制转换<span class="links">http://jinzhi.caojiale.660v.com/</span><span class="target">a1</span></li>
+<li>PureSearch<span class="links">https://781064707.rthe.cn/search.html</span><span class="target">a2</span></li>
+<li>帮你百度<span class="links">https://caojiale.rthe.cn/</span><span class="target">a3</span></li>
+<li>MD控件<span class="links">articles/MD控件.html</span><span class="target">a4</span></li>
+<li>常用工具函数<span class="links">about:blank</span><span class="target">a5</span></li>
+</ul></section>
+<section id="right">
+<div id="text">
+<p>
+&emsp;&emsp;抽奖机删掉了，除去以前做的很丑的东西，现在能拿出手的就只有左侧这些了。
+</p>
+<h5>• 进制转换&emsp;<a name="a1" href="javascript:jump(0);">点击预览</a></h5>
+<p>
+&emsp;&emsp;这个网页是我在上「大学计算机基础」这门公选课时写的，当时是有很多进制转换类型的题目，于是为了方便我就写了一个网页来专门转换进制。后来我又增加了一个功能，把十六进制颜色转换成rgba色，方便我P图时取色(PS Touch不加十六进制颜色我也没办法啊)。
+</p>
+<h5>• PureSearch&emsp;<a name="a2" href="javascript:jump(1);">点击预览</a></h5>
+<p>&emsp;&emsp;这个网页是我18年10月份写的，当时还是课太少闲的，主要是想写个干净的主页给自己用，这样就不用受那些头条之类的资讯摧残了。<a target="_blank" href="https://www.coolapk.com/feed/8698285?shareKey=ZGMxMjM3ZGQ2YjdjNWNmNjU0MDU~&shareUid=750936&shareFrom=com.coolapk.market_9.2">查看详细介绍</a>
+</p>
+<h5>• 帮你百度&emsp;<a name="a3" href="javascript:jump(2);">点击预览</a></h5>
+<p>&emsp;&emsp;这个帮别人百度的想法其实我老早就有，只是一直不会，后来偶然看到一篇关于PHP的文章，然后发现里面的$_GET函数很容易用，所以就做了一个这玩意<a target="_blank" href="https://www.coolapk.com/feed/9438897?shareKey=NzU1ZjJhZjlhMWFhNWNmNjU4NWQ~&shareUid=750936&shareFrom=com.coolapk.market_9.2">查看详细介绍</a>
+</p>
+<h5>• MD控件&emsp;<a name="a4" href="javascript:jump(3);">点击预览</a></h5>
+<p>&emsp;&emsp;浏览器自带的input控件几乎就没有一个好看的，一直执着MD的我就在暑假(没错，又是暑假，还是太闲了)模仿安卓里的那些控件做了一套输入控件，包括输入框、滑条、文字按钮、单选框、复选框和图像按钮，并且也在很多我的网页中选择性插入了那些控件。
+<h5>• 土制常用工具函数&emsp;<a style="opacity:0;" name="a5" href="javascript:jump(4);">锚点</a></h5>
+<p>&emsp;&emsp;众所周知，在写JS的时候有一些函数会被频繁调用(几乎不停地用)，比如选择器、添加事件监听、设置元素属性、还有控制元素显示隐藏等。jQuery确实强悍，然而就算是jquery.min.js我都嫌太大了，有太多我不需要的功能，所以我就尝试着自己写了几个工具函数：
+<ol>
+<li> $()选择器，与jquery一样使用，本质是document.querySelector()，在选择的元素大于1时返回的是数组，除非添加参数选择第几个。</li>
+<li> on()，还是仿jquery(没办法，谁叫这几个核心函数好用呢，虽然可以自己去看jquery的源码，毕竟开源的，但架不住我懒啊)，用于添加addEventListner事件监听器，不多解释了。</li>
+<li> attr()，用于便捷地给元素添加属性</li>
+</ol>
+</p>
+<p>
+最后：如果有人对我的那几个函数或者MD的控件感兴趣，可以联系我(QQ:1427432396)，我会给你源码并教你怎么用。
+</p>
+</div>
+<iframe id="i1" name="frame" src="about:blank"></iframe>
+</section>
+</body>
+<script>
+window.onload=function (){
+[].forEach.call(document.querySelectorAll("ul li"),function (element){
+element.addEventListener("click", function (){
+[].forEach.call(document.querySelectorAll("ul li"),function (element){
+element.style.background="#FFFFFF";
+element.style.color="#37474F";
+});
+this.style.background="#455A64 url('../img/icons/ic_right_white.png') no-repeat 95% center/auto 4vh";
+this.style.color="#FFFFFF";
+document.querySelector("#i1").src=this.querySelector(".links").innerHTML;
+window.location.hash=this.querySelector(".target").innerHTML;
+});
+});
+}
+function jump(index){
+document.querySelectorAll("ul li")[index].click();
+}
+</script>
+</html>

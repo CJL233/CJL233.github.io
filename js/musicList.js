@@ -1,0 +1,1 @@
+var musicList= '{ "musics" : [' +'{ "name":"Ed Sheeran - Nancy Mulligan" , "src":"audio/Ed Sheeran - Nancy Mulligan.flac" }' + ',{ "name":"RADWIMPS - 三葉のテーマ" , "src":"audio/RADWIMPS - 三葉のテーマ.flac" } ]}';

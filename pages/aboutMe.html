@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<html>
+<head><title>关于我</title></head>
+<style>
+body{
+margin:0;
+padding:0;
+}
+#left{
+float:left;
+width:20vw;
+height:100vh;
+background:#CFD8DC;
+box-shadow:2px 0 10px rgba(55,71,79,0.5);
+position:relative;
+z-index:2;
+margin:0;
+}
+#window{
+width:80vw;
+height:100vh;
+border:0;
+padding:0;
+margin:0;
+position:absolute;
+right:0;
+top:0;
+}
+ul{
+width:100%;
+margin:0;
+padding:0;
+}
+li{
+cursor:pointer;
+background:#FFFFFF;
+color:#37474F;
+width:100%;
+height:4.375vw;
+margin:0;
+line-height:4.375vw;
+font-size:1.1vw;
+text-align:center;
+margin-bottom:0.21vw;
+}
+li:first-child{
+background:#455A64 url('../img/icons/ic_right_white.png') no-repeat 90% center/auto 4vh;
+color:#ffffff;
+}
+.hidden{display:none;}
+</style>
+<body>
+<section id="left"><ul>
+</ul></section>
+<iframe id="window" src="about:blank"></iframe>
+</body>
+<script src="json/aboutMe.js"></script>
+<script>
+window.onload=function (){
+var links= eval ("(" +json+ ")");
+[].forEach.call(links, function (obj){
+document.querySelector("ul").innerHTML+="<li>"+obj.title+"<span class=\"hidden\">"+obj.src+"</span></li>";
+});
+[].forEach.call(document.querySelectorAll("li"),function (element){
+element.addEventListener("click", function (){
+window.parent.$transform();
+[].forEach.call(document.querySelectorAll("li"),function (element){
+element.style.background="#FFFFFF";
+element.style.color="#37474F";
+});
+this.style.background="#455A64 url('../img/icons/ic_right_white.png') no-repeat 90% center/auto 4vh";
+this.style.color="#FFFFFF";
+document.querySelector("#window").src=this.querySelector("span").innerHTML;
+});
+});
+document.querySelector("#window").src="articles/个人介绍.html";
+}
+</script>
+</html>
