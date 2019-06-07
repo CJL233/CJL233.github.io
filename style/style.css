@@ -21,7 +21,7 @@ z-index:2;
 overflow:hidden;
 color:white;
 transition:height 0.3s;
-background:#455A64 url("../img/pictures/headerBg.jpg") no-repeat center 60%/100% auto;
+background:#455A64 url("http://www.deskier.com/uploads/allimg/160820/1-160R0110002.jpg") no-repeat center 40%/100% auto;
 }
 #body{
 z-index:1;
@@ -165,6 +165,14 @@ padding:2%;
 box-shadow:1px 1px 10px rgba(0,0,0,0.5);
 }
 .musics{
+width:calc(90% - 3vh);
+margin:5%;
+height:3vh;
+line-height:3vh;
+text-overflow:ellipsis;
+white-space:nowrap;
+}
+._musics{
 width:calc(90% - 3vh);
 margin:5%;
 height:3vh;
