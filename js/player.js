@@ -82,19 +82,20 @@ player.src=mList.musics[0].src;
 $("#musicBoard").appendChild(player);
 $(".mDelete").on("click", function (event){
 event.stopPropagation();
+console.log(this.getAttribute("data-id"));
 if(confirm("确认删除？")){
 mList.musics.splice(parseInt(this.getAttribute("data-id"))-1,1);
 localStorage.musicList=JSON.stringify(mList);
 mReload();
 }
 });
-setTimeout(function (){
+player.on("canplay",function (){
 $(".switch",2).parentNode.style.backgroundImage="url('img/icons/ic_pause_white.png')";
 $("#musicIcon1").style.animation="musicRotate 4s linear infinite";
 $("#musicIcon2").style.animation="musicShake 4s linear infinite";
 player.play();
 progress();
-},5000);
+});
 }
 function play(src){
 player.pause();
