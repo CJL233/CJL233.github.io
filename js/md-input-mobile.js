@@ -6,5 +6,4 @@ window.onload=function (){
 var md_range=document.querySelectorAll(".md_range_1");
 for(var i=0;i<md_range.length;i++)md_range_check(md_range[i]);
 playerLoad();
-pageLoad();
 }

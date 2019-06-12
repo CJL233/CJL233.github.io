@@ -65,3 +65,4 @@ elem.id="tip";
 elem.innerHTML="<div id=\"tipMsg\">"+msg+"<div id=\"tipClose\" onclick=\"document.body.removeChild(this.parentNode.parentNode);\">确认</div></div>";
 document.body.appendChild(elem);
 }
+pageLoad();
