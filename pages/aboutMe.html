@@ -57,7 +57,6 @@ color:#ffffff;
 </body>
 <script src="json/aboutMe.js"></script>
 <script>
-window.onload=function (){
 var links= eval ("(" +json+ ")");
 [].forEach.call(links, function (obj){
 document.querySelector("ul").innerHTML+="<li>"+obj.title+"<span class=\"hidden\">"+obj.src+"</span></li>";
@@ -75,6 +74,6 @@ document.querySelector("#window").src=this.querySelector("span").innerHTML;
 });
 });
 document.querySelector("#window").src="articles/个人介绍.html";
-}
+
 </script>
 </html>
